@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my"
+  ],
+  "window": {
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#0F59A4",
+    "navigationBarTitleText": "前端天地",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#333333",
+    "selectedColor": "#0F59A4",
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "列表",
+        "iconPath": "assets/img/list.png",
+        "selectedIconPath": "assets/img/list-selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我",
+        "iconPath": "assets/img/my.png",
+        "selectedIconPath": "assets/img/my-selected.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

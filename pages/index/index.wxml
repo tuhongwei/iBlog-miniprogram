@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="post-list">
+    <block wx:key="id" wx:for="{{praiseList}}">
+        <view src="{{item.title}}" class="post-item" bindtap="postClick" data-title="{{item.title}}" data-path="{{item.path}}">{{item.title}}</view>
+        <view class="post-info">
+            <view class="post-author"></view>
+            <view class="post-time">{{item.categorie}}</view>
+        </view>
+    </block>
+  </view>
+</view>
