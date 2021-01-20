@@ -1,21 +1,87 @@
-/**index.wxss**/
-.userinfo {
+.article-list {
+  background-color: #eee;
+}
+
+.article-item {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+  background-color: #fff;
+}
+
+.article-item:nth-child(n + 2) {
+  margin-top: 60rpx;
+}
+
+.article-title {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #333;
+}
+
+.line-block {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 16rpx;
+  border-bottom: 2rpx solid #e4dfd7;
+  margin-top: 14rpx;
+}
+
+.article-updated-time {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+  font-size: 18rpx;
+  color: #e4dfd7;
+  text-align: right;
+}
+
+.article-updated-time image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.article-updated-time view {
+  margin-left: 6rpx;
+}
+
+.article-categorie, .article-tag {
+  display: flex;
   align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.article-tag {
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  margin-top: 26rpx;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.article-categorie image {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
 }
 
-.usermotto {
-  margin-top: 200px;
+.article-categorie-item, .article-tag-item {
+  font-size: 20rpx;
 }
+
+.article-categorie-item:nth-of-type(n + 2), .article-tag-item:nth-of-type(n + 2) {
+  margin-left: 8rpx;
+}
+
+.article-categorie-item {
+  color: #12aa9c;
+}
+
+.article-tag-item {
+  padding: 4rpx;
+  border-radius: 6rpx;
+  color: #fca104;
+  border: 2rpx solid #fca104;
+}
+

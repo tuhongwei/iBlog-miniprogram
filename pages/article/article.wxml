@@ -1,0 +1,3 @@
+<view class="artical">
+  <towxml nodes="{{ article }}"/>
+</view>

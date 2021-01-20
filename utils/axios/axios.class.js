@@ -19,8 +19,9 @@ class Axios {
    * 初始化用户配置，会覆盖默认配置
    * @param {Object} _config 配置
    */
-  creat(_config = {}) {
+  create(_config = {}) {
     this.defaultConfig = mergeConfig(this.defaultConfig, _config);
+    return this;
   }
 
   axios($1 = {}, $2 = {}) {

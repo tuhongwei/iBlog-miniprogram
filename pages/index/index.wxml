@@ -1,12 +1,23 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="post-list">
-    <block wx:key="id" wx:for="{{praiseList}}">
-        <view src="{{item.title}}" class="post-item" bindtap="postClick" data-title="{{item.title}}" data-path="{{item.path}}">{{item.title}}</view>
-        <view class="post-info">
-            <view class="post-author"></view>
-            <view class="post-time">{{item.categorie}}</view>
+<view class="article-list">
+  <view class="article-item" wx:key="index" wx:for="{{ articleList }}" bindtap="bindArticleTap" data-path="{{ item.path }}">
+    <view class="article-title">{{ item.title }}</view>
+    <view class="line-block">
+      <view class="article-updated-time">
+        <image src="../../assets/img/updated-time.svg"></image>
+        <view>{{ item.updated }}</view>
+      </view>
+      <view class="article-categorie">
+        <image src="../../assets/img/categorie.svg"></image>
+        <view class="article-categorie-item" wx:key="categorieIndex" wx:for="{{ item.categories }}" wx:for-index="categorieIndex" wx:for-item="categorieItem" data-categorie="{{ categorieItem.path }}">
+          {{ categorieItem.name }}
         </view>
-    </block>
+      </view>
+    </view>
+    
+    <view class="article-tag">
+      <view class="article-tag-item" wx:key="tagIndex" wx:for="{{ item.tags }}" wx:for-index="tagIndex" wx:for-item="tagItem" data-tag="{{ tagItem.path }}">
+        {{ tagItem.name }}
+      </view>
+    </view>
   </view>
 </view>

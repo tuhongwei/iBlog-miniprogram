@@ -1,26 +1,34 @@
-// index.js
-import axios from "../../utils/request/axios";
+import request from "../../utils/request";
 import { POSTS_URL } from "../../config/index";
 
 Page({
   data: {
-    isLoading: true,
-    articalList: {}
+    articleList: []
   },
   // 事件处理函数
-  bindViewTap() {
+  bindArticleTap(e) {
+    var path = e.currentTarget.dataset.path;
     wx.navigateTo({
-      url: '../logs/logs'
-    })
+      url: '../article/article?path=' + path
+    });
   },
   onLoad() {
-    axios
+    wx.showLoading({
+      title: '加载中',
+    });
+    request
       .get(POSTS_URL)
-      .then((res) => {
+      .then(res => {
         console.log("发起get请求-res", res);
+        this.setData({
+          articleList: res.data
+        });
       })
-      .catch((err) => {
+      .catch(err => {
         console.log("发起get请求-err", err);
+      })
+      .finally(() => {
+        wx.hideLoading();
       });
   }
 })
