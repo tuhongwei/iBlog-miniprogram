@@ -1,0 +1,9 @@
+var formatUpdatedTime = function (time) {
+  var pos = time.indexOf('T');
+  return time.substring(0, pos);
+  
+};
+
+module.exports = {
+  formatUpdatedTime: formatUpdatedTime
+};

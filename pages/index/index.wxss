@@ -1,5 +1,6 @@
 .article-list {
   background-color: #eee;
+  overflow: auto;
 }
 
 .article-item {
@@ -8,8 +9,8 @@
   background-color: #fff;
 }
 
-.article-item:nth-child(n + 2) {
-  margin-top: 60rpx;
+.article-item {
+  margin-bottom: 60rpx;
 }
 
 .article-title {

@@ -4,7 +4,8 @@
     <view class="line-block">
       <view class="article-updated-time">
         <image src="../../assets/img/updated-time.svg"></image>
-        <view>{{ item.updated }}</view>
+        <wxs src="../../utils/tools.wxs" module="tools" />
+        <view>{{ tools.formatUpdatedTime(item.updated) }}</view>
       </view>
       <view class="article-categorie">
         <image src="../../assets/img/categorie.svg"></image>
