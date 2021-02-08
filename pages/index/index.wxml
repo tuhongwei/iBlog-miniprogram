@@ -1,24 +1,27 @@
-<view class="article-list">
-  <view class="article-item" wx:key="index" wx:for="{{ articleList }}" bindtap="bindArticleTap" data-path="{{ item.path }}">
-    <view class="article-title">{{ item.title }}</view>
-    <view class="line-block">
-      <view class="article-updated-time">
-        <image src="../../assets/img/updated-time.svg"></image>
-        <wxs src="../../utils/tools.wxs" module="tools" />
-        <view>{{ tools.formatUpdatedTime(item.updated) }}</view>
+<scroll-view scroll-y='true' style="height: {{ height }}px" bindscrolltolower='lower' refresher-enabled bindrefresherrefresh="bindRefresherRefresh">
+  <view class="article-list">
+    <view class="article-item" wx:key="index" wx:for="{{ articleList }}" bindtap="bindArticleTap" data-path="{{ item.path }}">
+      <view class="article-title">{{ item.title }}</view>
+      <view class="line-block">
+        <view class="article-updated-time">
+          <image src="../../assets/img/updated-time.svg"></image>
+          <wxs src="../../utils/tools.wxs" module="tools" />
+          <view>{{ tools.formatUpdatedTime(item.updated) }}</view>
+        </view>
+        <view class="article-categorie">
+          <image src="../../assets/img/categorie.svg"></image>
+          <view class="article-categorie-item" wx:key="categorieIndex" wx:for="{{ item.categories }}" wx:for-index="categorieIndex" wx:for-item="categorieItem" data-categorie="{{ categorieItem.path }}">
+            {{ categorieItem.name }}
+          </view>
+        </view>
       </view>
-      <view class="article-categorie">
-        <image src="../../assets/img/categorie.svg"></image>
-        <view class="article-categorie-item" wx:key="categorieIndex" wx:for="{{ item.categories }}" wx:for-index="categorieIndex" wx:for-item="categorieItem" data-categorie="{{ categorieItem.path }}">
-          {{ categorieItem.name }}
+      
+      <view class="article-tag">
+        <view class="article-tag-item" wx:key="tagIndex" wx:for="{{ item.tags }}" wx:for-index="tagIndex" wx:for-item="tagItem" data-tag="{{ tagItem.path }}">
+          {{ tagItem.name }}
         </view>
       </view>
     </view>
-    
-    <view class="article-tag">
-      <view class="article-tag-item" wx:key="tagIndex" wx:for="{{ item.tags }}" wx:for-index="tagIndex" wx:for-item="tagItem" data-tag="{{ tagItem.path }}">
-        {{ tagItem.name }}
-      </view>
-    </view>
+    <view class="no-more-tips {{ isNoMore ? 'no-more' : '' }}">我是有底线的</view>
   </view>
-</view>
+</scroll-view>

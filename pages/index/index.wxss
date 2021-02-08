@@ -1,4 +1,5 @@
 .article-list {
+  padding-bottom: 40rpx;
   background-color: #eee;
   overflow: auto;
 }
@@ -9,8 +10,8 @@
   background-color: #fff;
 }
 
-.article-item {
-  margin-bottom: 60rpx;
+.article-item:not(:first-child) {
+  margin-top: 60rpx;
 }
 
 .article-title {
@@ -84,5 +85,17 @@
   border-radius: 6rpx;
   color: #fca104;
   border: 2rpx solid #fca104;
+}
+
+.no-more-tips {
+  display: none;
+  margin-top: 30rpx;
+  font-size: 20rpx;
+  color: #ccc;
+  text-align: center;
+}
+
+.no-more {
+  display: block;
 }
 
