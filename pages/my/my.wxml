@@ -1,2 +1,24 @@
-<!--pages/logs/logs.wxml-->
-<text>pages/logs/logs.wxml</text>
+<view class="top-block">
+  <view class="my-info">
+    <view class="avatar">
+      <image src="/assets/img/avatar.png" mode="widthFix"></image>
+    </view>
+    <view class="intro">
+      <view class="name">Twittytop</view>
+      <view class="job">前端开发工程师</view>
+    </view>
+  </view>
+</view>
+
+<view class="bottom-block">
+  <view class="item">
+    <image></image>
+    <view>我的博客</view>
+    <view></view>
+  </view>
+  <view>
+    <image></image>
+    <view>公众号</view>
+    <view></view>
+  </view>
+</view>

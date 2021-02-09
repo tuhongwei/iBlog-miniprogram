@@ -1,4 +1,4 @@
-<scroll-view scroll-y='true' style="height: {{ height }}px" bindscrolltolower='lower' refresher-enabled bindrefresherrefresh="bindRefresherRefresh">
+<scroll-view scroll-y='true' style="height: {{ height }}px" bindscrolltolower='lower' refresher-enabled refresher-triggered="{{ refreshLoading }}"  bindrefresherrefresh="bindRefresherRefresh">
   <view class="article-list">
     <view class="article-item" wx:key="index" wx:for="{{ articleList }}" bindtap="bindArticleTap" data-path="{{ item.path }}">
       <view class="article-title">{{ item.title }}</view>

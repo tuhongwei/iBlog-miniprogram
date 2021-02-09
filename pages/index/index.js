@@ -9,6 +9,7 @@ Page({
   data: {
     articleList: [],
     height: 0,
+    refreshLoading: false,
     isNoMore: false
   },
   onLoad() {
@@ -37,7 +38,9 @@ Page({
             articleList: res.data
           });
           if (type === 'refresh') {
-            console.log('refresh')
+            this.setData({
+              refreshLoading: false
+            });
           }
         } else {
           let articleList = this.data.articleList.concat(res.data);
@@ -71,6 +74,9 @@ Page({
     }
   },
   bindRefresherRefresh () {
+    this.setData({
+      refreshLoading: true
+    });
     this.getPostData(1, 'refresh');
   }
 })
