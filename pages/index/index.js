@@ -77,6 +77,7 @@ Page({
     this.setData({
       refreshLoading: true
     });
+    postInfo.curPage = 1;
     this.getPostData(1, 'refresh');
   }
 })
