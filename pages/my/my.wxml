@@ -11,14 +11,32 @@
 </view>
 
 <view class="bottom-block">
-  <view class="item">
-    <image></image>
-    <view>我的博客</view>
-    <view></view>
+  <view class="item" bindtap="goMyBlog" data-clipboard-text="https://tuhongwei.github.io">
+    <image class="left-icon" src="/assets/img/blog.svg" mode="widthFix"></image>
+    <view class="right-block">
+      <text>我的博客</text>
+      <view class="arrow-right"></view>
+    </view>
   </view>
-  <view>
-    <image></image>
-    <view>公众号</view>
-    <view></view>
+  <view wx:if="{{ scene === 1011 }}" class="official-account">
+    <view>
+      <image class="left-icon" src="/assets/img/attention.svg" mode="widthFix"></image>
+      <text>我的公众号</text>
+    </view>
+    <official-account></official-account>
+  </view>
+  <view wx:else class="item" bindtap="goMyOfficialAccount" data-clipboard-text="前端天地">
+    <image class="left-icon" src="/assets/img/attention.svg" mode="widthFix"></image>
+    <view class="right-block">
+      <text>我的公众号</text>
+      <view class="arrow-right"></view>
+    </view>
+  </view>
+  <view class="item" style="display: none">
+    <image class="left-icon" src="/assets/img/resume.svg" mode="widthFix"></image>
+    <view class="right-block">
+      <text>我的简历</text>
+      <view class="arrow-right"></view>
+    </view>
   </view>
 </view>

@@ -63,7 +63,14 @@
         {
           "name": "pages/my/my",
           "pathName": "pages/my/my",
-          "scene": null
+          "query": "",
+          "scene": 1001
+        },
+        {
+          "name": "pages/my/my",
+          "pathName": "pages/my/my",
+          "query": "",
+          "scene": 1011
         }
       ]
     }

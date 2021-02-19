@@ -1,5 +1,5 @@
 page {
-  background-color: #f1f1f1;
+  background-color: #ededed;
 }
 .my-info {
   display: flex;
@@ -23,18 +23,65 @@ page {
 .job {
   margin-top: 10rpx;
   font-size: 28rpx;
-  color: #aaa;
+  color: #808080;
 }
-.top-block, .bottom-block {
-  background-color: #fff;
+.top-block {
   padding-left: 30rpx;
-  padding-right: 30rpx;
+  background-color: #fff;
 }
 .bottom-block {
   margin-top: 40rpx;
+}
+.item, .official-account > view  {
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
   background-color: #fff;
 }
-.item {
-  padding-top: 10rpx;
-  padding-bottom: 10rpx;
+.official-account {
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  background-color: #fff;
+}
+.official-account > view {
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.official-account > view > text {
+  margin-left: 20rpx;
+}
+.left-icon {
+  width: 32rpx;
+}
+.right-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  padding-top: 36rpx;
+  padding-bottom: 36rpx;
+  padding-right: 30rpx;
+  border-bottom: 1rpx solid #e5e5e5;
+  margin-left: 20rpx;
+}
+.right-block text {
+  line-height: 1;
+  color: #1a1a1a;
+}
+.arrow-right {
+  position: relative;
+  width: 36rpx;
+  height: 36rpx;
+}
+.arrow-right::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  height: 18rpx;
+  width: 18rpx;
+  border-width: 4rpx 4rpx 0 0;
+  border-color: #b3b3b3;
+  border-style: solid;
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
 }
