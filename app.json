@@ -23,9 +23,9 @@
       },
       {
         "pagePath": "pages/my/my",
-        "text": "我",
-        "iconPath": "assets/img/my.png",
-        "selectedIconPath": "assets/img/my-selected.png"
+        "text": "关于我",
+        "iconPath": "assets/img/about-me.png",
+        "selectedIconPath": "assets/img/about-me-selected.png"
       }
     ]
   },
